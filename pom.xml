@@ -121,7 +121,7 @@
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.0</version>
+            <version>2.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -134,12 +134,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-rs-client</artifactId>
-            <version>3.1.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -441,7 +435,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverName>${wlpServerName}</serverName>
-                    <configFile>src/main/liberty/config/server.xml</configFile>
+                    <configDirectory>src/main/liberty/config</configDirectory>
                     <packageFile>${package.file}</packageFile>
                     <include>${packaging.type}</include>
                     <bootstrapProperties>
