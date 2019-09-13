@@ -40,14 +40,6 @@
     <!-- include location="${env.TARGET}-config.xml" optional="true"/ -->
     <sslDefault sslRef="restSSLSettings" />
 
-    <sslOptions id="restSSLOptions" sslRef="restSSLSettings" />
+    <ssl id="restSSLSettings" verifyHostname="false"/>
 
-    <ssl id="restSSLSettings"
-       keyStoreRef="restKeyStore"
-       sslProtocol="TLSv1.2" />
-
-    <keyStore id="restKeyStore"
-             location="clientkey.jks"
-             type="JKS"
-             password="password"/>
 </server>
